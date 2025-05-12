@@ -17,20 +17,10 @@ body, html {
     margin: 0;
     overflow: hidden;
 }
-/* .container {
-  width: 50%;
-  height: 60%;
-  background-color: #ffffff;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  border-radius: 8px;
-  box-shadow: 0 20px 45px rgba(120, 76, 10, 0.25);
-} */
+
 .cake {
   width: 100%;
-  bottom: 8%; 
+  bottom: 15%; 
   position: fixed;
 }
 .bottom-layer,
@@ -123,14 +113,22 @@ body, html {
 
 
 .contenedor-audio {
-  margin: 2%;
+  position: fixed;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%); /* Centra horizontalmente */
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 0.5rem;
+  border-radius: 10px; /* opcional: bordes redondeados */
   opacity: 0;
   visibility: hidden;
-  animation: aparecer 13s ease forwards;
+  animation: aparecer 15s ease forwards;
   animation-delay: 3s; /* tiempo de espera */
 }
+
 
 @keyframes aparecer {
   to {
@@ -149,37 +147,36 @@ body, html {
   font-size: clamp(0.6rem, 2vw, 1rem);
 }
 
-/* .aleluya-overlay {
-  position: fixed;       
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: radial-gradient(circle, yellow 0%, transparent 15%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9998;         
-  pointer-events: none;  
+
+.actual-image {
+    height: 1%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    margin: 5rem auto;
+    justify-content: center;
+}
+/* .actual-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block; 
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .actual-image {
+        max-width: 60vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .actual-image {
+        max-width: 350px;
+    }
 } */
-
-.aleluya-overlay img { 
-  top: 0;
-  width: 200px;
-  height: 100vh;
-  z-index: 9998;         /* Muy encima de todo */
-  pointer-events: none;  /* No bloquea clics */
-  animation: brillar 2s infinite alternate;
-}
-
-/* Animación tipo "aleluya" */
-@keyframes brillar {
-  from {
-    transform: scale(1);
-    filter: brightness(1.2);
-  }
-  to {
-    transform: scale(1.1);
-    filter: brightness(1.6);
-  }
-}
