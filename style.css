@@ -125,7 +125,7 @@ body, html {
   border-radius: 10px; /* opcional: bordes redondeados */
   opacity: 0;
   visibility: hidden;
-  animation: aparecer 15s ease forwards;
+  animation: aparecer 30s ease forwards;
   animation-delay: 3s; /* tiempo de espera */
 }
 

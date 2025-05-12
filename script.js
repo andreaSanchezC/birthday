@@ -21,7 +21,7 @@ async function startMic() {
       const volume = Math.sqrt(sum / dataArray.length);
 
       // Si el volumen supera un umbral (ajústalo según el micrófono)
-      if (volume > 0.03) {
+      if (volume > 0.05) {
         flame.style.display = 'none';
         statusText.textContent = '¡Apagaste la vela!, ahora reproduce el audio';
       }
